@@ -4,6 +4,11 @@ import os
 import requests
 import shutil
 
+'''
+Just a space to configure informations about the files
+'''
+TrollFacePath = "TrollFace.jpeg"
+
 BLACK = (0, 0, 0, 0)
 
 client = ds.Client()
@@ -128,5 +133,7 @@ async def on_message(message):
             await message.channel.send(file=picture)
         os.remove("pers.png")
         os.remove("thinking.png")
-
+    if message.content.lower().startswith("%troll"):
+        pass
+        #To do
 client.run("")
